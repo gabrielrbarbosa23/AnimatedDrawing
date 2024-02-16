@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+#content {
+  transition: transform 2s;
+  transform: rotate(0deg);
+  height: 100vh;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-10px, 0); }
+  20%, 40%, 60%, 80%, 100% { transform: translate(10px, 0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: #180A0A;
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+canvas {
+  background-color: #ECDBBA ;
+  border-radius: 14px 14px 0 0;
+  border: 5px solid #570A57;
+}
+
+.toolbox {
+  display: flex;
+  width: 1010px;
+  border-radius: 0 0 14px 14px;
+  background-color: #570A57;
+  border: 1rem solid #570A57;
+}
+.toolbox > * {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 80px;
+  height: 50px;
+  font-size: 2rem;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 14px;
+  background-color: #570A57;
+  transition: all .2s ease-in-out; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.toolbox > *:hover {
+  transform: scale(1.1); 
+}
+.toolbox > input {
+  padding: 1;
+}
+.toolbox > *:last-child {
+  margin-left: auto;
+}
+
+.rotate {
+  border-radius: 12px;
+  border: none;
+  background-color: #570A57;
+}
